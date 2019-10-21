@@ -1,0 +1,112 @@
+*{
+	box-sizing: border-box;
+}
+
+html{
+	--padding: 10px;
+	--margin: 30px;
+	--border-width: 1px;
+
+	font-family: 'Rajdhani', sans-serif;
+}
+
+body{
+	margin:0;
+	background: black;
+	color:  white;
+	background: url(./background.JPG);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+h1, h2, h3, h4{
+	margin:0;
+}
+
+h1, h2{
+	text-transform: uppercase;
+}
+
+hr.prism{
+	height: 40px;
+	margin-top: -36px;
+	z-index: -1;
+	border:none;
+	box-shadow: none;
+}
+
+.page {
+	max-width: 1200px;
+	left:0;
+	right: 0;
+	margin: auto;
+	padding: var(--padding);
+	font-size: 1.1em;
+}
+
+@keyframes removeHeaderMargin {
+  from {
+    margin-top: 50vh;
+  }
+
+  to {
+    margin-top: 10vh;
+  }
+}
+
+header{
+	text-align: center;
+    padding: var(--padding);
+    font-size: 3em;
+  	animation-timing-function: cubic-bezier(0,1,.1,1);
+  	animation-duration: 3s;
+  	animation-name: removeHeaderMargin;
+  	animation-fill-mode: both;
+  	text-shadow: 0 0 50px rgba(255, 255, 255, 0.4)
+}
+
+section {
+    padding: var(--padding);
+	margin: var(--margin);
+	border: solid 1px rgba(255,255,255,0.1);
+    background: black;
+}
+
+section.negative,
+section.negative.prism{
+	color: black;
+	background: white;
+	border-color: rgba(0,0,0,0.5);
+	box-shadow: 0 0 70px -30px white;
+}
+section.negative.prism:before,
+section.negative.prism:after{
+	filter: invert();
+}
+
+.code{
+	background: rgba(100,100,100,0.9);
+	padding: 0.2em 0.5em;
+	border-radius: 4px;
+	color: white;
+	font-family: monospace;
+}
+
+section.prism{
+	backdrop-filter: blur(50px);
+	border: solid 1px rgba(255,255,255,0.1);
+    background: rgba(0,0,0,0.5);
+    box-shadow: 0 0 50px -20px rgba(0,0,0,0.25);
+}
+
+
+a{
+	color: inherit;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+pre{
+	padding: var(--padding);
+	overflow: auto;
+}
