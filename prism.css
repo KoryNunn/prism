@@ -16,7 +16,8 @@
     pointer-events: none;
 
     /* Fix the background gradient to the viewport. This makes it look like it's moving when you scroll */
-    background-attachment: fixed;
+    background-position: 0 var(--scrollPosition);
+    background-size: 100vh 100vw;
 }
 
 /* Draw the refracted light effect */
