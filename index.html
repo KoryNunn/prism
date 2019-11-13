@@ -6,6 +6,14 @@
 	<link rel="stylesheet" type="text/css" href="prism.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+	  window.addEventListener("scroll", event => {
+	  // Dealing with Safari difference.
+	  let scrollTop = document.body.scrollTop ? document.body.scrollTop : document.documentElement.scrollTop; 
+	  let newPosition = scrollTop + "px";
+	  document.documentElement.style.setProperty('--scrollPosition', newPosition);
+	});
+	</script>
 </head>
 <body>
 	<header class="prism">
